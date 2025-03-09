@@ -1,0 +1,4 @@
+# Ignore compiled Haskell files
+*.hi
+*.o
+*.exe
