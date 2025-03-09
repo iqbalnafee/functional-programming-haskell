@@ -1,0 +1,1 @@
+main = putStrLn ("addition of two numbers : " ++ show (2+2)) -- dont require do beacuse show is not io action
