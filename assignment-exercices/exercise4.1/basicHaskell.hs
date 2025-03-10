@@ -17,6 +17,10 @@ inrange1 x a b = x >= min a b && x <= max a b
 exclusiveOr :: Bool -> Bool -> Bool
 exclusiveOr a b = a /= b
 
+implications :: Bool -> Bool -> Bool
+implications True False = False
+implications p q = True
+
 main = do
     putStrLn("double of 5 is : " ++ show(double 5))
     putStrLn("ratio of 10+5 and 10-5 is : " ++ show(ratio 10 5))
@@ -25,3 +29,4 @@ main = do
     putStrLn("x-intercept of the line is : " ++ show(xIntercept 5 3 6))
     putStrLn("is 2 in range of 1 & 5 ? : " ++ show(inrange1 2 1 5))
     putStrLn("testing x-clusive or : " ++ show(exclusiveOr False False))
+    putStrLn("testing implications : " ++ show(implications True False))
