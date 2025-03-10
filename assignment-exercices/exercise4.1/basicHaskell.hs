@@ -11,9 +11,13 @@ xIntercept :: Float -> Float -> Float -> Float
 xIntercept _ _ 0 = error "Slope cannot be zero!"
 xIntercept y c m = (y-c) / m
 
+inrange1 :: (Ord a) => a -> a -> a -> Bool
+inrange1 x a b = x >= min a b && x <= max a b
+
 main = do
     putStrLn("double of 5 is : " ++ show(double 5))
     putStrLn("ratio of 10+5 and 10-5 is : " ++ show(ratio 10 5))
     putStrLn("length of the longest side of a right triangle using pythagoraus theorem: " ++ show(hypotenuse 2.5 3.3))
     putStrLn("length of the longest side of a right triangle using pythagoraus theorem and lambda: " ++ show((\x y -> sqrt(x^2 + y^2))3 4))
     putStrLn("x-intercept of the line is : " ++ show(xIntercept 5 3 6))
+    putStrLn("is 2 in range of 1 & 5 ? : " ++ show(inrange1 2 1 5))
