@@ -24,6 +24,9 @@ implications p q = True
 hundreads :: Integer -> Integer
 hundreads n = (n `div` 100) `mod` 10 -- / is not supported for integers
 
+middle :: String -> Char
+middle s = s !! ((length s) `div` 2) 
+
 main = do
     putStrLn("double of 5 is : " ++ show(double 5))
     putStrLn("ratio of 10+5 and 10-5 is : " ++ show(ratio 10 5))
@@ -34,3 +37,4 @@ main = do
     putStrLn("testing x-clusive or : " ++ show(exclusiveOr False False))
     putStrLn("testing implications : " ++ show(implications True False))
     putStrLn("hundread digit of 1234 : " ++ show(hundreads 1234))
+    putStrLn("middle of wxAyz is : " ++ show(middle "wxAyz"))
