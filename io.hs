@@ -6,5 +6,7 @@ main = do
     putStrLn "Give me a number!"
     num <- readLn :: IO Int
     if (even num) then
-        putStrLn (show num ++ " is even.")
+        do
+            putStrLn (show num ++ " is even.") -- for multiples, use do
+            putStrLn "Great!"
     else putStrLn "odd number."
